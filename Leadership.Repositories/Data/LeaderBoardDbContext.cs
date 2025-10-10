@@ -57,6 +57,5 @@ namespace Leadership.Repositories.Data
                 .OnDelete(DeleteBehavior.Restrict);
         }
 
-
     }
 }
