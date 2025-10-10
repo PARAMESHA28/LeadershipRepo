@@ -13,9 +13,9 @@ namespace Leadership.Domain.Models
         public int UserId { get; set; } 
         public int QuizId { get; set; }
         [JsonIgnore]
-        public Quiz Quiz { get; set; }
+        public Quiz? Quiz { get; set; } 
         public int Score { get; set; }
         [JsonIgnore]
-        public ICollection<Response> Responses { get; set; }
+        public ICollection<Response> Responses { get; set; } = new List<Response>();
     }
 }
