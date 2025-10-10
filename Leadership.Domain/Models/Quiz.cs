@@ -12,7 +12,7 @@ namespace Leadership.Domain.Models
         public string QuizTitle { get; set; }
         public int CourseId { get; set; }
         public ICollection<Question> Questions { get; set; }
-        public ICollection<Paticipant> Paticipants { get; set; }
+        public ICollection<Participant> Participants { get; set; }
 
 
     }

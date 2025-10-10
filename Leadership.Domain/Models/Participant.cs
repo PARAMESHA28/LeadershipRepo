@@ -10,12 +10,9 @@ namespace Leadership.Domain.Models
     {
         public int ParticipantId { get; set; }
         public int UserId { get; set; } 
-
         public int QuizId { get; set; }
         public Quiz Quiz { get; set; }
-
         public int Score { get; set; }
-
         public ICollection<Response> Responses { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace Leadership.Domain.Models
         public int QuizId { get; set; }
         public int Marks { get; set; }
         public Quiz Quiz { get; set; }
-        public ICollection<Options> options { get; set; }
+        public ICollection<Option> options { get; set; }
 
 
     }
