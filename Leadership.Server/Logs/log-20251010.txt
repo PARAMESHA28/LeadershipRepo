@@ -126,3 +126,163 @@ FROM [Quizzes] AS [q]
 2025-10-10 16:07:43.326 +05:30 [INF] Executed action Leadership.Server.Controllers.QuizController.GetAllQuizzes (Leadership.Server) in 12.244ms
 2025-10-10 16:07:43.327 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.QuizController.GetAllQuizzes (Leadership.Server)'
 2025-10-10 16:07:43.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/Quiz/GetAllQuizzes - 200 null application/json; charset=utf-8 22.5682ms
+2025-10-10 16:17:46.275 +05:30 [INF] Leadership Service running
+2025-10-10 16:17:46.459 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 16:17:46.531 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 16:17:46.533 +05:30 [INF] Hosting environment: Development
+2025-10-10 16:17:46.534 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 16:17:47.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-10 16:17:47.056 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-10 16:17:47.085 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 36.5338ms
+2025-10-10 16:17:47.114 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.1586ms
+2025-10-10 16:17:47.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-10 16:17:47.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.7891ms
+2025-10-10 16:58:09.069 +05:30 [INF] Leadership Service running
+2025-10-10 16:58:09.330 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 16:58:09.416 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 16:58:09.418 +05:30 [INF] Hosting environment: Development
+2025-10-10 16:58:09.419 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 16:58:10.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-10 16:58:10.168 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-10 16:58:10.227 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 69.7811ms
+2025-10-10 16:58:10.246 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.1201ms
+2025-10-10 16:58:10.283 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-10 16:58:10.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.9957ms
+2025-10-10 16:59:37.693 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:8081/api/Question/CreateQuestion - application/json 158
+2025-10-10 16:59:37.778 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-10 16:59:37.785 +05:30 [INF] CORS policy execution successful.
+2025-10-10 16:59:37.788 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server)'
+2025-10-10 16:59:37.803 +05:30 [INF] Route matched with {action = "CreateQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateQuestion(Leadership.Domain.Models.Question) on controller Leadership.Server.Controllers.QuestionController (Leadership.Server).
+2025-10-10 16:59:38.795 +05:30 [ERR] Failed executing DbCommand (40ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Quizzes] ([QuizId], [CourseId], [QuizTitle])
+VALUES (@p0, @p1, @p2);
+INSERT INTO [Questions] ([Marks], [QuestionText], [QuizId])
+OUTPUT INSERTED.[QuestionId]
+VALUES (@p3, @p4, @p5);
+2025-10-10 16:59:38.818 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Leadership.Repositories.Data.LeaderBoardDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Quizzes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c3a36207-3e55-41bd-9a9f-21fb053ac173
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Quizzes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:c3a36207-3e55-41bd-9a9f-21fb053ac173
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-10 17:06:59.028 +05:30 [INF] Leadership Service running
+2025-10-10 17:06:59.213 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 17:06:59.305 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 17:06:59.307 +05:30 [INF] Hosting environment: Development
+2025-10-10 17:06:59.307 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 17:06:59.499 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-10 17:06:59.500 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-10 17:06:59.529 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 36.7897ms
+2025-10-10 17:06:59.557 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.3632ms
+2025-10-10 17:06:59.590 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-10 17:06:59.631 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.2758ms
+2025-10-10 17:07:41.524 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:8081/api/Question/CreateQuestion - application/json 84
+2025-10-10 17:07:41.559 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-10 17:07:41.562 +05:30 [INF] CORS policy execution successful.
+2025-10-10 17:07:41.565 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server)'
+2025-10-10 17:07:41.582 +05:30 [INF] Route matched with {action = "CreateQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateQuestion(Leadership.Domain.Models.Question) on controller Leadership.Server.Controllers.QuestionController (Leadership.Server).
+2025-10-10 17:07:41.716 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-10 17:07:41.736 +05:30 [INF] Executed action Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server) in 149.0042ms
+2025-10-10 17:07:41.738 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server)'
+2025-10-10 17:07:41.739 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:8081/api/Question/CreateQuestion - 400 null application/problem+json; charset=utf-8 215.6972ms
+2025-10-10 17:09:51.248 +05:30 [INF] Leadership Service running
+2025-10-10 17:09:51.451 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 17:09:51.549 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 17:09:51.550 +05:30 [INF] Hosting environment: Development
+2025-10-10 17:09:51.551 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 17:09:52.069 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-10 17:09:52.069 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-10 17:09:52.120 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 56.0033ms
+2025-10-10 17:09:52.182 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.9356ms
+2025-10-10 17:09:52.219 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-10 17:09:52.264 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.5305ms
+2025-10-10 17:10:04.137 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:8081/api/Question/CreateQuestion - application/json 84
+2025-10-10 17:10:04.181 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-10 17:10:04.184 +05:30 [INF] CORS policy execution successful.
+2025-10-10 17:10:04.187 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server)'
+2025-10-10 17:10:04.203 +05:30 [INF] Route matched with {action = "CreateQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateQuestion(Leadership.Domain.Models.Question) on controller Leadership.Server.Controllers.QuestionController (Leadership.Server).
+2025-10-10 17:10:05.167 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Questions] ([Marks], [QuestionText], [QuizId])
+OUTPUT INSERTED.[QuestionId]
+VALUES (@p0, @p1, @p2);
+2025-10-10 17:10:05.209 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Leadership.Domain.Models.Question'.
+2025-10-10 17:10:05.230 +05:30 [INF] Executed action Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server) in 1021.9741ms
+2025-10-10 17:10:05.232 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.QuestionController.CreateQuestion (Leadership.Server)'
+2025-10-10 17:10:05.240 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:8081/api/Question/CreateQuestion - 201 null application/json; charset=utf-8 1102.7319ms
+2025-10-10 17:14:05.485 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/Question/GetQuestionById/2 - null null
+2025-10-10 17:14:05.489 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.QuestionController.GetQuestionById (Leadership.Server)'
+2025-10-10 17:14:05.493 +05:30 [INF] Route matched with {action = "GetQuestionById", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestionById(Int32) on controller Leadership.Server.Controllers.QuestionController (Leadership.Server).
+2025-10-10 17:14:05.720 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__questionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [q].[QuestionId], [q].[Marks], [q].[QuestionText], [q].[QuizId]
+FROM [Questions] AS [q]
+WHERE [q].[QuestionId] = @__questionId_0
+2025-10-10 17:14:05.728 +05:30 [INF] Executing OkObjectResult, writing value of type 'Leadership.Domain.Models.Question'.
+2025-10-10 17:14:05.730 +05:30 [INF] Executed action Leadership.Server.Controllers.QuestionController.GetQuestionById (Leadership.Server) in 234.5151ms
+2025-10-10 17:14:05.730 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.QuestionController.GetQuestionById (Leadership.Server)'
+2025-10-10 17:14:05.731 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/Question/GetQuestionById/2 - 200 null application/json; charset=utf-8 250.305ms
+2025-10-10 17:14:45.722 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:8081/api/Question/UpdateQuestion/2 - application/json 85
+2025-10-10 17:14:45.726 +05:30 [INF] CORS policy execution successful.
+2025-10-10 17:14:45.727 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.QuestionController.UpdateQuestion (Leadership.Server)'
+2025-10-10 17:14:45.730 +05:30 [INF] Route matched with {action = "UpdateQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateQuestion(Int32, Leadership.Domain.Models.Question) on controller Leadership.Server.Controllers.QuestionController (Leadership.Server).
+2025-10-10 17:14:45.749 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__question_QuestionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [q].[QuestionId], [q].[Marks], [q].[QuestionText], [q].[QuizId]
+FROM [Questions] AS [q]
+WHERE [q].[QuestionId] = @__question_QuestionId_0
+2025-10-10 17:14:45.759 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Questions] SET [QuestionText] = @p0
+OUTPUT 1
+WHERE [QuestionId] = @p1;
+2025-10-10 17:14:45.762 +05:30 [INF] Executing OkObjectResult, writing value of type 'Leadership.Domain.Models.Question'.
+2025-10-10 17:14:45.763 +05:30 [INF] Executed action Leadership.Server.Controllers.QuestionController.UpdateQuestion (Leadership.Server) in 31.2022ms
+2025-10-10 17:14:45.765 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.QuestionController.UpdateQuestion (Leadership.Server)'
+2025-10-10 17:14:45.765 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:8081/api/Question/UpdateQuestion/2 - 200 null application/json; charset=utf-8 43.6747ms

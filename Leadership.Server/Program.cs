@@ -11,11 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IParticipantService, ParticipantService>();
+builder.Services.AddScoped<IQuizService, QuizService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
 
 builder.Services.AddScoped<IParticipantRepository, ParticipantRepository>();
-
-builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddScoped<IQuizRepository,QuizRepository>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
 
 builder.Services.AddDbContext<LeaderBoardDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
