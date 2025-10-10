@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Leadership.Service.ServiceImpl
+namespace Leadership.Domain.IRepositories
 {
-    internal class LeaderService
+    internal interface ILeaderBoardRepository
     {
     }
 }
