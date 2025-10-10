@@ -1,0 +1,43 @@
+2025-10-10 15:51:39.846 +05:30 [INF] Leadership Service running
+2025-10-10 15:51:40.144 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 15:51:40.217 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 15:51:40.219 +05:30 [INF] Hosting environment: Development
+2025-10-10 15:51:40.219 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 15:51:52.990 +05:30 [INF] Leadership Service running
+2025-10-10 15:51:53.240 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 15:51:53.320 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 15:51:53.322 +05:30 [INF] Hosting environment: Development
+2025-10-10 15:51:53.323 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 15:51:54.894 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/ - null null
+2025-10-10 15:51:54.998 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/ - 301 0 null 108.2117ms
+2025-10-10 15:51:55.003 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/index.html - null null
+2025-10-10 15:51:55.065 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/index.html - 200 null text/html;charset=utf-8 62.3655ms
+2025-10-10 15:51:55.067 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger-ui-bundle.js - null null
+2025-10-10 15:51:55.133 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger-ui-standalone-preset.js - null null
+2025-10-10 15:51:55.067 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/index.css - null null
+2025-10-10 15:51:55.067 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/index.js - null null
+2025-10-10 15:51:55.198 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger-ui.css - null null
+2025-10-10 15:51:55.210 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/index.js - 200 null application/javascript;charset=utf-8 142.4098ms
+2025-10-10 15:51:55.198 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-10 15:51:55.223 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 25.3107ms
+2025-10-10 15:51:55.231 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/index.css - 200 152 text/css 164.1713ms
+2025-10-10 15:51:55.231 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger-ui.css - 200 23647 text/css 33.0152ms
+2025-10-10 15:51:55.232 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger-ui-standalone-preset.js - 200 77352 text/javascript 164.8975ms
+2025-10-10 15:51:55.240 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger-ui-bundle.js - 200 424767 text/javascript 173.6399ms
+2025-10-10 15:51:55.247 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-10 15:51:55.443 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 195.526ms
+2025-10-10 15:51:55.487 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-10 15:51:55.498 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.8279ms
+2025-10-10 15:51:55.505 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/favicon-32x32.png - null null
+2025-10-10 15:51:55.508 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/favicon-32x32.png - 200 628 image/png 3.2812ms
+2025-10-10 15:52:59.251 +05:30 [INF] Leadership Service running
+2025-10-10 15:52:59.430 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-10 15:52:59.512 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-10 15:52:59.512 +05:30 [INF] Hosting environment: Development
+2025-10-10 15:52:59.513 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-10 15:53:00.475 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-10 15:53:00.476 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-10 15:53:00.555 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 85.3581ms
+2025-10-10 15:53:00.578 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.0919ms
+2025-10-10 15:53:00.625 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-10 15:53:00.665 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.9215ms
