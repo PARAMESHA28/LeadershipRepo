@@ -14,7 +14,7 @@ namespace Leadership.Domain.Models
         public Participant Participant { get; set; }
         public int QuestionId { get; set; }
         public Question Question { get; set; }
-        public int? SelectedOptionId { get; set; } 
+        public int? OptionId { get; set; } 
         public Option SelectedOption { get; set; }
         public DateTime ResponseTime { get; set; }
     }
