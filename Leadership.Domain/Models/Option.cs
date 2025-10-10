@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Leadership.Domain.Models
@@ -12,7 +13,8 @@ namespace Leadership.Domain.Models
         public string OptionText { get; set; }
         public bool IsCorrect { get; set; }
         public int QuestionId { get; set; }
-        public Question Question { get; set; }
+        [JsonIgnore]
+        public Question? Question { get; set; }
 
 
     }

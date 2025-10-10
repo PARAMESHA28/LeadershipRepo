@@ -15,6 +15,7 @@ builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddScoped<IResponseService, ResponseService>();
 builder.Services.AddScoped<ILeaderBoardService, LeaderBoardService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IOptionService, OptionService>();
 
 builder.Services.AddScoped<IParticipantRepository, ParticipantRepository>();
 builder.Services.AddScoped<IQuizRepository, QuizRepository>();
@@ -23,6 +24,7 @@ builder.Services.AddScoped<ILeaderBoardRepository, LeaderBoardRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+builder.Services.AddScoped<IOptionRepository, OptionRepository>();
 
 builder.Services.AddDbContext<LeaderBoardDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
