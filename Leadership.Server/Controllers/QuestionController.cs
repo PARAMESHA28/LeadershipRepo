@@ -1,12 +1,12 @@
 ﻿using Leadership.Domain.IServices;
 using Leadership.Domain.Models;
+using Leadership.Domain.Constant;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Leadership.Server.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route(RouteMapConstants.BaseControllerRoute)]
     public class QuestionController : ControllerBase
     {
         public readonly IQuestionService _questionService;

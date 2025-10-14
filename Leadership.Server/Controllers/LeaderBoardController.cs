@@ -1,11 +1,11 @@
 ﻿using Leadership.Domain.IServices;
 using Leadership.Domain.Models;
+using Leadership.Domain.Constant;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Leadership.Server.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route(RouteMapConstants.BaseControllerRoute)]
     public class LeaderBoardController : ControllerBase
     {
         private readonly ILeaderBoardService _leaderBoardService;
