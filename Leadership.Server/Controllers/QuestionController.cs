@@ -14,12 +14,14 @@ namespace Leadership.Server.Controllers
         {
             _questionService = questionService;
         }
+
         [HttpGet("GetAllQuestions")]
         public async Task<IActionResult> GetAllQuestions()
         {
             var questions = await _questionService.GetAllQuestionsAsync();
             return Ok(questions);
         }
+
         [HttpGet("GetQuestionById/{questionId}")]
         public async Task<IActionResult> GetQuestionById(int questionId)
         {
@@ -30,6 +32,7 @@ namespace Leadership.Server.Controllers
             }
             return Ok(question);
         }
+
         [HttpPost("CreateQuestion")]
         public async Task<IActionResult> CreateQuestion( Question question)
         {
@@ -40,6 +43,7 @@ namespace Leadership.Server.Controllers
             var createdQuestion = await _questionService.CreateQuestionAsync(question);
             return CreatedAtAction(nameof(GetQuestionById), new { questionId = createdQuestion.QuestionId }, createdQuestion);
         }
+
         [HttpPut("UpdateQuestion/{questionId}")]
         public async Task<IActionResult> UpdateQuestion(int questionId, Question question)
         {
@@ -54,6 +58,7 @@ namespace Leadership.Server.Controllers
             }
             return Ok(updatedQuestion);
         }
+
         [HttpDelete("DeleteQuestion/{questionId}")]
         public async Task<IActionResult> DeleteQuestion(int questionId)
         {

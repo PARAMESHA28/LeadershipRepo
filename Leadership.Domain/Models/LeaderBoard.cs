@@ -11,9 +11,11 @@ namespace Leadership.Domain.Models
     {
         public int LeaderboardId { get; set; }
         public int QuizId { get; set; }
+
         [JsonIgnore]
         public Quiz? Quiz { get; set; } 
         public int ParticipantId { get; set; }
+
         [JsonIgnore]
         public Participant? Participant { get; set; } 
         public int Score { get; set; }

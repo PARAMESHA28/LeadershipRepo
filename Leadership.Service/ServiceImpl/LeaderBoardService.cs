@@ -16,6 +16,7 @@ namespace Leadership.Service.ServiceImpl
         {
             _leaderBoardRepository = leaderBoardRepository;
         }
+
         public async Task<IEnumerable<LeaderBoard>> GetAllAsync()
         {
             return await _leaderBoardRepository.GetAll();

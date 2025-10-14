@@ -14,12 +14,14 @@ namespace Leadership.Server.Controllers
         {
                        _quizService = quizService;
         }
+
         [HttpGet("GetAllQuizzes")]
         public async Task<IActionResult> GetAllQuizzes()
         {
             var quizzes = await _quizService.GetAllQuizzesAsync();
             return Ok(quizzes);
         }
+
         [HttpGet("GetQuizById/{quizId}")]
         public async Task<IActionResult> GetQuizById(int quizId)
         {
@@ -30,6 +32,7 @@ namespace Leadership.Server.Controllers
             }
             return Ok(quiz);
         }
+
         [HttpPost("CreateQuiz")]
         public async Task<IActionResult> CreateQuiz( Quiz quiz)
         {
@@ -40,6 +43,7 @@ namespace Leadership.Server.Controllers
             var createdQuiz = await _quizService.CreateQuizAsync(quiz);
             return CreatedAtAction(nameof(GetQuizById), new { quizId = createdQuiz.QuizId }, createdQuiz);
         }
+
         [HttpPut("UpdateQuiz/{quizId}")]
         public async Task<IActionResult> UpdateQuiz(int quizId, Quiz quiz)
         {
@@ -54,6 +58,7 @@ namespace Leadership.Server.Controllers
             }
             return Ok(updatedQuiz);
         }
+
         [HttpDelete("DeleteQuiz/{quizId}")]
         public async Task<IActionResult> DeleteQuiz(int quizId)
         {

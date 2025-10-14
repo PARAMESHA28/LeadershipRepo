@@ -12,7 +12,6 @@ namespace Leadership.Domain.IRepositories
         Task<IEnumerable<LeaderBoard>> GetAll();
         Task<LeaderBoard> GetById(int Id);
         Task<LeaderBoard> Create(LeaderBoard leaderboard);
-
         Task<LeaderBoard> Update(LeaderBoard leaderboard);
         Task<LeaderBoard> DeleteById(int Id);
     }

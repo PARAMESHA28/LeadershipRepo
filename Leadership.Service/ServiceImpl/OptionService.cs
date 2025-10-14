@@ -16,6 +16,7 @@ namespace Leadership.Service.ServiceImpl
         {
             _optionRepository = optionRepository;
         }
+
         public async Task<IEnumerable<Option>> GetAllOptionsAsync()
         {
             return await _optionRepository.GetAllOptionsAsync();

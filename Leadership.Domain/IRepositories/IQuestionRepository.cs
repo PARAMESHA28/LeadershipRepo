@@ -12,9 +12,7 @@ namespace Leadership.Domain.IRepositories
         public Task<IEnumerable<Question>> GetAllQuestionsAsync();
         public Task<Question> GetQuestionByIdAsync(int questionId);
         public Task<Question> CreateQuestionAsync(Question question);
-            
         public Task<Question> UpdateQuestionAsync(Question question);
-
         public Task<Question> DeleteQuestionAsync(int questionId);
     }
 }

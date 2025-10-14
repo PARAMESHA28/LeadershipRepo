@@ -13,6 +13,7 @@ namespace Leadership.Domain.Models
         public string QuestionText { get; set; }
         public int Marks { get; set; }
         public int QuizId { get; set; }
+        
         [JsonIgnore]
         public Quiz? Quiz { get; set; }
 

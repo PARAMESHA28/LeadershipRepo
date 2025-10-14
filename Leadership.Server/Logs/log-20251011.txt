@@ -1,0 +1,64 @@
+2025-10-11 10:00:47.074 +05:30 [INF] Leadership Service running
+2025-10-11 10:00:47.270 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-11 10:00:47.381 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-11 10:00:47.383 +05:30 [INF] Hosting environment: Development
+2025-10-11 10:00:47.385 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-11 10:00:47.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-11 10:00:47.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-11 10:00:47.738 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 113.5871ms
+2025-10-11 10:00:47.805 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.743ms
+2025-10-11 10:00:47.838 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-11 10:00:47.890 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.0807ms
+2025-10-11 10:01:32.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-11 10:01:32.876 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 4.2125ms
+2025-10-11 10:01:32.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-11 10:01:32.906 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.5659ms
+2025-10-11 10:01:32.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-11 10:01:32.985 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.0174ms
+2025-10-11 10:03:13.395 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/Option/GetAllOptions - null null
+2025-10-11 10:03:13.453 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-11 10:03:13.461 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.OptionController.GetAllOptions (Leadership.Server)'
+2025-10-11 10:03:13.478 +05:30 [INF] Route matched with {action = "GetAllOptions", controller = "Option"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOptions() on controller Leadership.Server.Controllers.OptionController (Leadership.Server).
+2025-10-11 10:03:15.509 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[OptionId], [o].[IsCorrect], [o].[OptionText], [o].[QuestionId]
+FROM [Options] AS [o]
+2025-10-11 10:03:15.563 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Leadership.Domain.Models.Option, Leadership.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-11 10:03:15.572 +05:30 [INF] Executed action Leadership.Server.Controllers.OptionController.GetAllOptions (Leadership.Server) in 2090.0136ms
+2025-10-11 10:03:15.573 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.OptionController.GetAllOptions (Leadership.Server)'
+2025-10-11 10:03:15.579 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/Option/GetAllOptions - 200 null application/json; charset=utf-8 2190.9828ms
+2025-10-11 13:54:32.459 +05:30 [INF] Leadership Service running
+2025-10-11 13:54:32.683 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-11 13:54:32.890 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-11 13:54:32.891 +05:30 [INF] Hosting environment: Development
+2025-10-11 13:54:32.892 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-11 13:54:33.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-11 13:54:33.339 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-11 13:54:33.383 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 54.155ms
+2025-10-11 13:54:33.420 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.021ms
+2025-10-11 13:54:33.462 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-11 13:54:33.517 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.6287ms
+2025-10-11 14:24:35.894 +05:30 [INF] Leadership Service running
+2025-10-11 14:24:36.095 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-11 14:24:36.350 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-11 14:24:36.350 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-11 14:24:36.400 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 55.7373ms
+2025-10-11 14:24:36.432 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-11 14:24:36.434 +05:30 [INF] Hosting environment: Development
+2025-10-11 14:24:36.435 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-11 14:24:36.448 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.0838ms
+2025-10-11 14:24:36.486 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-11 14:24:36.531 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.1764ms
+2025-10-11 14:25:24.550 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/LeaderBoard - null null
+2025-10-11 14:25:24.612 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-11 14:25:24.616 +05:30 [INF] Executing endpoint 'Leadership.Server.Controllers.LeaderBoardController.GetAll (Leadership.Server)'
+2025-10-11 14:25:24.635 +05:30 [INF] Route matched with {action = "GetAll", controller = "LeaderBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Leadership.Server.Controllers.LeaderBoardController (Leadership.Server).
+2025-10-11 14:25:26.004 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaderboardId], [l].[ParticipantId], [l].[QuizId], [l].[Rank], [l].[Score], [p].[ParticipantId], [p].[QuizId], [p].[Score], [p].[UserId], [q].[QuizId], [q].[CourseId], [q].[QuizTitle]
+FROM [LeaderBoards] AS [l]
+INNER JOIN [Participants] AS [p] ON [l].[ParticipantId] = [p].[ParticipantId]
+INNER JOIN [Quizzes] AS [q] ON [l].[QuizId] = [q].[QuizId]
+ORDER BY [l].[Rank]
+2025-10-11 14:25:26.034 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Leadership.Domain.Models.LeaderBoard, Leadership.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-11 14:25:26.048 +05:30 [INF] Executed action Leadership.Server.Controllers.LeaderBoardController.GetAll (Leadership.Server) in 1408.8175ms
+2025-10-11 14:25:26.050 +05:30 [INF] Executed endpoint 'Leadership.Server.Controllers.LeaderBoardController.GetAll (Leadership.Server)'
+2025-10-11 14:25:26.057 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/LeaderBoard - 200 null application/json; charset=utf-8 1506.9541ms

@@ -12,11 +12,9 @@ namespace Leadership.Domain.IServices
         Task<IEnumerable<Quiz>> GetAllQuizzesAsync();
         Task<Quiz> GetQuizByIdAsync(int quizId);
         Task<Quiz> CreateQuizAsync(Quiz quiz);
-            
         Task<Quiz> UpdateQuizAsync(Quiz quiz);
         Task<Quiz> DeleteQuizAsync(int quizId);
 
             
-      
     }
 }

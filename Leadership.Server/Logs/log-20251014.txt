@@ -1,0 +1,22 @@
+2025-10-14 09:39:02.584 +05:30 [INF] Leadership Service running
+2025-10-14 09:39:02.845 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-14 09:39:02.974 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 09:39:02.976 +05:30 [INF] Hosting environment: Development
+2025-10-14 09:39:02.976 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-14 09:39:05.094 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-14 09:39:05.094 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-14 09:39:05.114 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 25.7449ms
+2025-10-14 09:39:05.177 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.1665ms
+2025-10-14 09:39:05.274 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-14 09:39:05.310 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.2536ms
+2025-10-14 12:31:33.500 +05:30 [INF] Leadership Service running
+2025-10-14 12:31:33.719 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-14 12:31:33.812 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 12:31:33.814 +05:30 [INF] Hosting environment: Development
+2025-10-14 12:31:33.815 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-14 12:31:34.008 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-14 12:31:34.009 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-14 12:31:34.124 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 120.3264ms
+2025-10-14 12:31:34.201 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 199.3617ms
+2025-10-14 12:31:34.232 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-14 12:31:34.277 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.127ms

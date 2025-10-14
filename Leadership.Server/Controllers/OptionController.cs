@@ -14,12 +14,14 @@ namespace Leadership.Server.Controllers
         {
             _optionService = optionService;
         }
+
         [HttpGet("GetAllOptions")]
         public async Task<IActionResult> GetAllOptions()
         {
             var options = await _optionService.GetAllOptionsAsync();
             return Ok(options);
         }
+
         [HttpGet("GetOptionById/{optionId}")]
         public async Task<IActionResult> GetOptionById(int optionId)
         {
@@ -30,6 +32,7 @@ namespace Leadership.Server.Controllers
             }
             return Ok(option);
         }
+
         [HttpPost("CreateOption")]
         public async Task<IActionResult> CreateOption( Option option)
         {
@@ -40,6 +43,7 @@ namespace Leadership.Server.Controllers
             var createdOption = await _optionService.CreateOptionAsync(option);
             return CreatedAtAction(nameof(GetOptionById), new { optionId = createdOption.OptionId }, createdOption);
         }
+
         [HttpPut("UpdateOption/{optionId}")]
         public async Task<IActionResult> UpdateOption(int optionId, Option option)
         {
@@ -54,6 +58,7 @@ namespace Leadership.Server.Controllers
             }
             return Ok(updatedOption);
         }
+
         [HttpDelete("DeleteOption/{optionId}")]
         public async Task<IActionResult> DeleteOption(int optionId)
         {

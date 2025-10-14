@@ -16,6 +16,7 @@ namespace Leadership.Service.ServiceImpl
         {
             _repositories = repositories;
         }
+
         public async Task<IEnumerable<Response>> GetAll()
         {
             return await _repositories.GetAllResponses();

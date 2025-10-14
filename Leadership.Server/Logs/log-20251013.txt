@@ -1,0 +1,17 @@
+2025-10-13 09:52:39.230 +05:30 [INF] Leadership Service running
+2025-10-13 09:52:39.469 +05:30 [INF] Now listening on: http://localhost:8081
+2025-10-13 09:52:39.562 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-13 09:52:39.564 +05:30 [INF] Hosting environment: Development
+2025-10-13 09:52:39.565 +05:30 [INF] Content root path: C:\Users\VSOFT\OneDrive - V Software Consulting inc\Downloads\Param\MicroServices\Leadership.Service\Leadership.Server
+2025-10-13 09:52:40.136 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-13 09:52:40.136 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-13 09:52:40.159 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 32.5221ms
+2025-10-13 09:52:40.232 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 107.1337ms
+2025-10-13 09:52:40.285 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-13 09:52:40.339 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.6358ms
+2025-10-13 16:04:33.161 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-13 16:04:33.167 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/_vs/browserLink - null null
+2025-10-13 16:04:33.174 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 16.1789ms
+2025-10-13 16:04:33.185 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.9969ms
+2025-10-13 16:04:33.235 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - null null
+2025-10-13 16:04:33.256 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:8081/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.0584ms
