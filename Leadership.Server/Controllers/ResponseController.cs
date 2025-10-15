@@ -32,7 +32,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateResponse(Response response)
+        public async Task<IActionResult> CreateResponse([FromBody] Response response)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -42,7 +42,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateResponse(int id, Response response)
+        public async Task<IActionResult> UpdateResponse(int id,[FromBody] Response response)
         {
             if (id != response.ResponseId)
                 return BadRequest("Response ID mismatch.");

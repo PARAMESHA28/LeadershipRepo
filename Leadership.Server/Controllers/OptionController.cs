@@ -34,7 +34,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPost("CreateOption")]
-        public async Task<IActionResult> CreateOption( Option option)
+        public async Task<IActionResult> CreateOption([FromBody] Option option)
         {
             if (option == null)
             {
@@ -45,7 +45,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPut("UpdateOption/{optionId}")]
-        public async Task<IActionResult> UpdateOption(int optionId, Option option)
+        public async Task<IActionResult> UpdateOption(int optionId,[FromBody] Option option)
         {
             if (optionId != option.OptionId || option == null)
             {

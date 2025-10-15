@@ -32,7 +32,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(LeaderBoard leaderboard)
+        public async Task<IActionResult> Create([FromBody]LeaderBoard leaderboard)
         {
             var created = await _leaderBoardService.CreateAsync(leaderboard);
             return CreatedAtAction(nameof(GetById), new { id = created.LeaderboardId }, created);

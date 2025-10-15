@@ -34,7 +34,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPost("CreateQuiz")]
-        public async Task<IActionResult> CreateQuiz( Quiz quiz)
+        public async Task<IActionResult> CreateQuiz([FromBody] Quiz quiz)
         {
             if (quiz == null)
             {
@@ -45,7 +45,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPut("UpdateQuiz/{quizId}")]
-        public async Task<IActionResult> UpdateQuiz(int quizId, Quiz quiz)
+        public async Task<IActionResult> UpdateQuiz(int quizId,[FromBody] Quiz quiz)
         {
             if (quizId != quiz.QuizId || quiz == null)
             {

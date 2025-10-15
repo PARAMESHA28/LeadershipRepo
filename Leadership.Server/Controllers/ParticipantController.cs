@@ -33,7 +33,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Participant participant)
+        public async Task<IActionResult> Create([FromBody] Participant participant)
         {
             var createParticipant = await _participantService.Create(participant);
             return CreatedAtAction(nameof(GetById), new { id = createParticipant.ParticipantId }, createParticipant);
