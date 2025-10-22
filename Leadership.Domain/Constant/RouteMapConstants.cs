@@ -10,5 +10,6 @@ namespace Leadership.Domain.Constant
     {
         public const string BaseRoute= "api/v1/";
         public const string BaseControllerRoute=BaseRoute + "[controller]";
+        public const string GetOptionsById = "/{optionId}";
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Leadership.Domain.IRepositories;
 using Leadership.Domain.Models;
 using Leadership.Repositories.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,28 @@ namespace Leadership.Repositories.RepositoryImpl
         {
             _context = context;
         }
-        public async Task<IEnumerable<Question>> GetAllQuestionsAsync()
+        public async Task<IEnumerable<Question>> GetAllQuestionsAsync(int quizId)
         {
-            return await Task.FromResult(_context.Questions.ToList());
+            //var questions = _context.Questions.Where(q => q.QuizId == quizId)
+            //    .Include(q => q.options)
+            //    .ToListAsync();
+
+            //return await questions;
+            var questions = _context.Questions
+       .Where(q => q.QuizId == quizId)
+       .Select(q => new Question
+       {
+           QuestionId = q.QuestionId,
+           QuestionText = q.QuestionText,
+           Marks = q.Marks,
+           QuizId = q.QuizId,
+           options = _context.Options
+                       .Where(o => o.QuestionId == q.QuestionId)
+                       .ToList()
+       })
+       .ToList();
+
+            return await Task.FromResult(questions);
         }
         public async Task<Question> GetQuestionByIdAsync(int questionId)
         {

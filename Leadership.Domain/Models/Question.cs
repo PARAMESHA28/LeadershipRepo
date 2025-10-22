@@ -17,7 +17,7 @@ namespace Leadership.Domain.Models
         [JsonIgnore]
         public Quiz? Quiz { get; set; }
 
-        [JsonIgnore]
+       
         public ICollection<Option> options { get; set; }=new List<Option>();
 
 

@@ -15,10 +15,10 @@ namespace Leadership.Server.Controllers
             _questionService = questionService;
         }
 
-        [HttpGet("GetAllQuestions")]
-        public async Task<IActionResult> GetAllQuestions()
+        [HttpGet("GetAllQuestionsByQuizId")]
+        public async Task<IActionResult> GetAllQuestionsByQuizId([FromQuery]int quizId)
         {
-            var questions = await _questionService.GetAllQuestionsAsync();
+            var questions = await _questionService.GetAllQuestionsAsync(quizId);
             return Ok(questions);
         }
 

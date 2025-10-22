@@ -9,7 +9,7 @@ namespace Leadership.Domain.IRepositories
 {
     public interface IQuestionRepository
     {
-        public Task<IEnumerable<Question>> GetAllQuestionsAsync();
+        public Task<IEnumerable<Question>> GetAllQuestionsAsync(int quizId);
         public Task<Question> GetQuestionByIdAsync(int questionId);
         public Task<Question> CreateQuestionAsync(Question question);
         public Task<Question> UpdateQuestionAsync(Question question);

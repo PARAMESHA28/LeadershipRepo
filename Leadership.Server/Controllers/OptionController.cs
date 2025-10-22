@@ -15,14 +15,14 @@ namespace Leadership.Server.Controllers
             _optionService = optionService;
         }
 
-        [HttpGet("GetAllOptions")]
+        [HttpGet]
         public async Task<IActionResult> GetAllOptions()
         {
             var options = await _optionService.GetAllOptionsAsync();
             return Ok(options);
         }
 
-        [HttpGet("GetOptionById/{optionId}")]
+        [HttpGet(RouteMapConstants.GetOptionsById)]
         public async Task<IActionResult> GetOptionById(int optionId)
         {
             var option = await _optionService.GetOptionByIdAsync(optionId);
@@ -34,7 +34,7 @@ namespace Leadership.Server.Controllers
         }
 
         [HttpPost("CreateOption")]
-        public async Task<IActionResult> CreateOption([FromBody] Option option)
+        public async Task<IActionResult> CreateOption( [FromBody]Option option)
         {
             if (option == null)
             {

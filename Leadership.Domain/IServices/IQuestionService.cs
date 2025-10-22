@@ -9,7 +9,7 @@ namespace Leadership.Domain.IServices
 {
     public interface IQuestionService
     {
-        Task<IEnumerable<Question>> GetAllQuestionsAsync();
+        Task<IEnumerable<Question>> GetAllQuestionsAsync(int quizId);
         Task<Question> GetQuestionByIdAsync(int questionId);
         Task<Question> CreateQuestionAsync(Question question);
         Task<Question> UpdateQuestionAsync(Question question);

@@ -17,9 +17,9 @@ namespace Leadership.Service.ServiceImpl
             _questionRepository = questionRepository;
         }
 
-        public async Task<IEnumerable<Question>> GetAllQuestionsAsync()
+        public async Task<IEnumerable<Question>> GetAllQuestionsAsync(int quizId)
         {
-            return await _questionRepository.GetAllQuestionsAsync();
+            return await _questionRepository.GetAllQuestionsAsync(quizId);
         }
         public async Task<Question> GetQuestionByIdAsync(int questionId)
         {
