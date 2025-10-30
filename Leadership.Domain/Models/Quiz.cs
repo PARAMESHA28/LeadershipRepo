@@ -14,10 +14,10 @@ namespace Leadership.Domain.Models
         public int CourseId { get; set; }
         
         [JsonIgnore]
-        public ICollection<Question> Questions { get; set; } = new List<Question>();
+        public ICollection<Question>? Questions { get; set; } = new List<Question>();
         
         [JsonIgnore]
-        public ICollection<Participant> Participants { get; set; } = new List<Participant>(); 
+        public ICollection<Participant>? Participants { get; set; } = new List<Participant>(); 
 
 
     }

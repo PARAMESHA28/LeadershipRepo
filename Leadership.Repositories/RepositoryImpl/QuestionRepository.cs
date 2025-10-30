@@ -32,7 +32,7 @@ namespace Leadership.Repositories.RepositoryImpl
            QuestionText = q.QuestionText,
            Marks = q.Marks,
            QuizId = q.QuizId,
-           options = _context.Options
+           Options = _context.Options
                        .Where(o => o.QuestionId == q.QuestionId)
                        .ToList()
        })

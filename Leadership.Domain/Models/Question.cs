@@ -18,7 +18,7 @@ namespace Leadership.Domain.Models
         public Quiz? Quiz { get; set; }
 
        
-        public ICollection<Option> options { get; set; }=new List<Option>();
+        public ICollection<Option> Options { get; set; }=new List<Option>();
 
 
     }
