@@ -27,17 +27,32 @@ namespace Leadership.Repositories.RepositoryImpl
         }
         public async Task<Participant> CreateParticipant(Participant participant)
         {
+            var quizExists = await _dbContext.Quizzes.AnyAsync(q => q.QuizId == participant.QuizId);
+            if (!quizExists)
+                throw new InvalidOperationException("Quiz not found.");
+
+            var userExists = await _dbContext.Users.AnyAsync(u => u.UserId == participant.UserId);
+            if (!userExists)
+                throw new InvalidOperationException("User not found.");
+
             var existing = await _dbContext.Participants
-               .FirstOrDefaultAsync(p => p.UserId == participant.UserId && p.QuizId == participant.QuizId);
+                .FirstOrDefaultAsync(p => p.UserId == participant.UserId && p.QuizId == participant.QuizId);
 
             if (existing != null)
-                throw new InvalidOperationException("Participant is already registered for this quiz.");
+            {
+                existing.Score = participant.Score;
+                //existing.AttemptedAt = DateTime.UtcNow;
+                await _dbContext.SaveChangesAsync();
+                return existing;
+            }
 
+            //participant.AttemptedAt = DateTime.UtcNow;
             await _dbContext.Participants.AddAsync(participant);
             await _dbContext.SaveChangesAsync();
 
             return participant;
         }
+
         public async Task<Participant> UpdateParticipant(Participant newParticipant)
         {
             var existing = await _dbContext.Participants

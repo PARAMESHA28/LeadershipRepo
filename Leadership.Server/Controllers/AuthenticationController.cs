@@ -54,7 +54,13 @@ namespace Leadership.Server.Controllers
                 return Unauthorized(new { message = "Invalid credentials" });
 
             var token = _jwtService.GenerateToken(user);
-            return Ok(token);
+            return Ok(new
+            {
+                token = token,
+                userId = user.UserId,
+                fullName = user.FullName,
+                email = user.Email
+            });
         }
     }
 }

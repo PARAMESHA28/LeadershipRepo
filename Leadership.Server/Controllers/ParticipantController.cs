@@ -32,12 +32,22 @@ namespace Leadership.Server.Controllers
             return Ok(participants);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Participant participant)
+        [HttpPost("SubmitQuiz")]
+        public async Task<IActionResult> SubmitQuiz([FromBody] Participant dto)
         {
-            var createParticipant = await _participantService.Create(participant);
-            return CreatedAtAction(nameof(GetById), new { id = createParticipant.ParticipantId }, createParticipant);
+            Console.WriteLine($"📩 Received Participant => UserId: {dto.UserId}, QuizId: {dto.QuizId}, Score: {dto.Score}");
+
+            var participant = new Participant
+            {
+                UserId = dto.UserId,
+                QuizId = dto.QuizId,
+                Score = dto.Score
+            };
+
+            var result = await _participantService.Create(participant);
+            return Ok(new { message = "Quiz submitted successfully!", result });
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] Participant participant)
